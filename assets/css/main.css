@@ -792,19 +792,18 @@ section { padding: 7rem 2rem; }
 
 .lead-magnet-illustration {
     width: 100%;
-    max-width: 280px;
+    max-width: 250px;
     height: auto;
-    opacity: 0.85;
-    filter: drop-shadow(0 4px 20px rgba(196, 153, 59, 0.15));
+    opacity: 0.9;
 }
 
-.lead-magnet-illustration circle[r="32"] {
-    animation: moonGlow 6s ease-in-out infinite;
+.lead-magnet-illustration circle[r="35"] {
+    animation: lineGlow 5s ease-in-out infinite;
 }
 
-@keyframes moonGlow {
-    0%, 100% { opacity: 0.9; filter: brightness(1); }
-    50% { opacity: 1; filter: brightness(1.15); }
+@keyframes lineGlow {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.65; }
 }
 
 @media (max-width: 768px) {
