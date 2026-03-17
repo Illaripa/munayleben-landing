@@ -32,21 +32,62 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* ── ANDEAN TEXTILE CORNERS ── */
+/* ── ANDEAN TEXTILE DECORATIONS ── */
 .andean-corner {
     position: absolute;
     pointer-events: none;
-    z-index: 0;
+    z-index: 1;
 }
 
 .andean-tl {
-    top: 1rem;
-    left: 1rem;
+    top: 0;
+    left: 0;
 }
 
 .andean-br {
-    bottom: 1rem;
-    right: 1rem;
+    bottom: 0;
+    right: 0;
+}
+
+/* Andean stripe border — repeating zigzag pattern */
+.andean-stripe {
+    position: relative;
+}
+
+.andean-stripe::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    z-index: 2;
+    background:
+        linear-gradient(135deg, #C4993B 25%, transparent 25%) -10px 0,
+        linear-gradient(225deg, #C4993B 25%, transparent 25%) -10px 0,
+        linear-gradient(315deg, #B85C38 25%, transparent 25%),
+        linear-gradient(45deg, #B85C38 25%, transparent 25%);
+    background-size: 20px 4px;
+    background-repeat: repeat-x;
+    opacity: 0.35;
+}
+
+.andean-stripe-bottom::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    z-index: 2;
+    background:
+        linear-gradient(135deg, #1863DC 25%, transparent 25%) -10px 0,
+        linear-gradient(225deg, #1863DC 25%, transparent 25%) -10px 0,
+        linear-gradient(315deg, #C4993B 25%, transparent 25%),
+        linear-gradient(45deg, #C4993B 25%, transparent 25%);
+    background-size: 20px 4px;
+    background-repeat: repeat-x;
+    opacity: 0.3;
 }
 
 .icon {
