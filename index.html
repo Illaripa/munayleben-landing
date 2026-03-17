@@ -323,7 +323,61 @@
                 <p class="lead-magnet-hint">Kein Abo. Keine Kosten. Einfach ausprobieren.</p>
             </div>
             <div class="lead-magnet-visual">
-                <div class="lead-magnet-glow"></div>
+                <svg class="lead-magnet-illustration" viewBox="0 0 300 300" fill="none">
+                    <!-- Sky glow -->
+                    <circle cx="150" cy="90" r="80" fill="url(#skyGlow)" opacity="0.3"/>
+                    <!-- Moon -->
+                    <circle cx="150" cy="85" r="32" fill="url(#moonGrad)" opacity="0.9"/>
+                    <circle cx="162" cy="78" r="28" fill="url(#moonShadow)" opacity="0.3"/>
+                    <!-- Moon glow rays -->
+                    <circle cx="150" cy="85" r="45" stroke="url(#rayGrad)" stroke-width="0.5" opacity="0.4"/>
+                    <circle cx="150" cy="85" r="58" stroke="url(#rayGrad)" stroke-width="0.3" opacity="0.25"/>
+                    <!-- Stars -->
+                    <circle cx="80" cy="50" r="1.5" fill="#C4993B" opacity="0.6"/>
+                    <circle cx="220" cy="65" r="1" fill="#C4993B" opacity="0.5"/>
+                    <circle cx="110" cy="35" r="1" fill="#C4993B" opacity="0.4"/>
+                    <circle cx="200" cy="40" r="1.5" fill="#C4993B" opacity="0.35"/>
+                    <circle cx="170" cy="30" r="0.8" fill="#C4993B" opacity="0.5"/>
+                    <circle cx="250" cy="90" r="1" fill="#C4993B" opacity="0.3"/>
+                    <circle cx="60" cy="80" r="0.8" fill="#C4993B" opacity="0.45"/>
+                    <!-- Mountains back -->
+                    <path d="M0 220 L60 155 L100 180 L150 130 L200 170 L250 140 L300 175 L300 300 L0 300Z" fill="url(#mtBack)" opacity="0.5"/>
+                    <!-- Mountains front -->
+                    <path d="M0 250 L40 200 L80 220 L130 175 L170 200 L210 180 L260 210 L300 190 L300 300 L0 300Z" fill="url(#mtFront)" opacity="0.7"/>
+                    <!-- Ground -->
+                    <path d="M0 260 L50 250 L100 255 L150 245 L200 252 L250 248 L300 255 L300 300 L0 300Z" fill="url(#ground)" opacity="0.5"/>
+                    <!-- Defs -->
+                    <defs>
+                        <radialGradient id="skyGlow" cx="50%" cy="50%">
+                            <stop offset="0%" stop-color="#C4993B" stop-opacity="0.4"/>
+                            <stop offset="100%" stop-color="#C4993B" stop-opacity="0"/>
+                        </radialGradient>
+                        <radialGradient id="moonGrad" cx="40%" cy="35%">
+                            <stop offset="0%" stop-color="#E8D5A3"/>
+                            <stop offset="100%" stop-color="#C4993B"/>
+                        </radialGradient>
+                        <radialGradient id="moonShadow" cx="50%" cy="50%">
+                            <stop offset="0%" stop-color="#FDFAF4"/>
+                            <stop offset="100%" stop-color="#FDFAF4" stop-opacity="0"/>
+                        </radialGradient>
+                        <linearGradient id="rayGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#C4993B" stop-opacity="0.5"/>
+                            <stop offset="100%" stop-color="#C4993B" stop-opacity="0"/>
+                        </linearGradient>
+                        <linearGradient id="mtBack" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#6B5B4E"/>
+                            <stop offset="100%" stop-color="#4A3228"/>
+                        </linearGradient>
+                        <linearGradient id="mtFront" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#5A4636"/>
+                            <stop offset="100%" stop-color="#2C1E14"/>
+                        </linearGradient>
+                        <linearGradient id="ground" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#4A3228"/>
+                            <stop offset="100%" stop-color="#2C1E14"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
             </div>
         </div>
     </div>
