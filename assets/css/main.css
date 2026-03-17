@@ -630,15 +630,53 @@ section { padding: 7rem 2rem; }
 .lead-magnet-card {
     max-width: 900px;
     margin: 0 auto;
-    background: rgba(26, 26, 46, 0.75);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255,255,255,0.08);
+    background:
+        linear-gradient(135deg,
+            rgba(196, 153, 59, 0.08) 0%,
+            rgba(240, 230, 214, 0.6) 30%,
+            rgba(253, 250, 244, 0.95) 60%,
+            rgba(196, 153, 59, 0.05) 100%
+        );
+    border: 1px solid rgba(196, 153, 59, 0.2);
     border-radius: 24px;
     overflow: hidden;
     position: relative;
     display: grid;
     grid-template-columns: 1.3fr 0.7fr;
+    box-shadow:
+        0 20px 60px rgba(74, 50, 40, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.lead-magnet-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(196, 153, 59, 0.12) 0%, transparent 70%);
+    pointer-events: none;
+    animation: warmGlow 8s ease-in-out infinite alternate;
+}
+
+.lead-magnet-card::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(184, 92, 56, 0.06) 0%, transparent 70%);
+    pointer-events: none;
+    animation: warmGlow 10s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes warmGlow {
+    0% { transform: scale(1); opacity: 0.7; }
+    100% { transform: scale(1.15); opacity: 1; }
 }
 
 .lead-magnet-content {
@@ -648,29 +686,32 @@ section { padding: 7rem 2rem; }
 }
 
 .lead-magnet-badge {
-    display: inline-block;
-    background: var(--forest);
-    color: var(--white);
-    font-size: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(45, 74, 62, 0.1);
+    color: var(--forest);
+    font-size: 0.78rem;
     font-weight: 700;
-    padding: 0.35rem 1rem;
+    padding: 0.4rem 1.1rem;
     border-radius: 50px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     margin-bottom: 1.5rem;
+    border: 1px solid rgba(45, 74, 62, 0.15);
 }
 
 .lead-magnet-content h2 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 2rem;
-    color: var(--white);
+    color: var(--dark);
     font-weight: 500;
     line-height: 1.2;
     margin-bottom: 1rem;
 }
 
 .lead-magnet-content > p {
-    color: rgba(240, 230, 214, 0.6);
+    color: var(--text-light);
     font-size: 0.95rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
@@ -686,77 +727,52 @@ section { padding: 7rem 2rem; }
     display: flex;
     align-items: center;
     gap: 0.7rem;
-    padding: 0.4rem 0;
-    color: var(--sand);
+    padding: 0.45rem 0;
+    color: var(--text);
     font-size: 0.92rem;
     font-weight: 400;
 }
 
 .lead-magnet-benefits .icon {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--forest);
-    background: rgba(45, 74, 62, 0.25);
-    padding: 4px;
+    background: rgba(45, 74, 62, 0.1);
+    padding: 5px;
     border-radius: 50%;
+    border: 1px solid rgba(45, 74, 62, 0.12);
 }
 
 .btn-lead {
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
-    background: var(--forest);
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
     color: var(--white);
-    padding: 1rem 2.5rem;
+    padding: 1.05rem 2.5rem;
     border-radius: 50px;
     font-size: 0.95rem;
     font-weight: 600;
     text-decoration: none;
     border: none;
     cursor: pointer;
-    transition: all 0.4s;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 6px 20px rgba(196, 153, 59, 0.25);
 }
 
 .btn-lead:hover {
-    background: #3D7A52;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(45, 74, 62, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(196, 153, 59, 0.4);
+    background: linear-gradient(135deg, var(--gold-dark), #7A5A10);
 }
 
 .btn-lead .icon { font-size: 1.1rem; }
 
 .lead-magnet-hint {
-    color: rgba(240, 230, 214, 0.35);
+    color: var(--text-light);
     font-size: 0.82rem;
     margin-top: 0.8rem;
     font-weight: 300;
-}
-
-.lead-magnet-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-        radial-gradient(2px 2px at 15% 20%, rgba(255,255,255,0.5), transparent),
-        radial-gradient(2px 2px at 85% 15%, rgba(255,255,255,0.4), transparent),
-        radial-gradient(1.5px 1.5px at 45% 80%, rgba(255,255,255,0.35), transparent),
-        radial-gradient(2px 2px at 70% 60%, rgba(255,255,255,0.3), transparent),
-        radial-gradient(1px 1px at 25% 55%, rgba(255,255,255,0.45), transparent),
-        radial-gradient(1.5px 1.5px at 90% 75%, rgba(255,255,255,0.25), transparent),
-        radial-gradient(2px 2px at 55% 30%, rgba(255,255,255,0.35), transparent),
-        radial-gradient(1px 1px at 35% 10%, rgba(255,255,255,0.5), transparent),
-        radial-gradient(1.5px 1.5px at 80% 45%, rgba(255,255,255,0.3), transparent),
-        radial-gradient(1px 1px at 10% 70%, rgba(255,255,255,0.4), transparent),
-        radial-gradient(2px 2px at 60% 90%, rgba(255,255,255,0.2), transparent),
-        radial-gradient(1px 1px at 50% 50%, rgba(255,255,255,0.35), transparent);
-    animation: starsTwinkle 6s ease-in-out infinite alternate;
-    pointer-events: none;
-    z-index: 0;
-}
-
-@keyframes starsTwinkle {
-    0% { opacity: 0.5; }
-    50% { opacity: 1; }
-    100% { opacity: 0.6; }
+    font-style: italic;
 }
 
 .lead-magnet-visual {
@@ -765,53 +781,44 @@ section { padding: 7rem 2rem; }
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    z-index: 1;
 }
 
 .lead-magnet-glow {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(45, 74, 62, 0.35) 0%, rgba(24, 99, 220, 0.12) 50%, transparent 70%);
-    animation: glowPulse 4s ease-in-out infinite;
+    background: radial-gradient(circle,
+        rgba(196, 153, 59, 0.2) 0%,
+        rgba(196, 153, 59, 0.08) 40%,
+        transparent 70%
+    );
     position: relative;
-}
-
-.lead-magnet-glow::before,
-.lead-magnet-glow::after {
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    animation: bubbleFloat 5s ease-in-out infinite;
+    animation: sacredPulse 6s ease-in-out infinite;
+    border: 1px solid rgba(196, 153, 59, 0.1);
 }
 
 .lead-magnet-glow::before {
-    width: 40px;
-    height: 40px;
-    top: -20px;
-    right: 10px;
-    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.15), rgba(24, 99, 220, 0.08));
-    border: 1px solid rgba(255,255,255,0.08);
-    animation-delay: 0s;
+    content: '';
+    position: absolute;
+    inset: 20px;
+    border-radius: 50%;
+    border: 1px solid rgba(196, 153, 59, 0.12);
+    animation: sacredPulse 6s ease-in-out infinite reverse;
 }
 
 .lead-magnet-glow::after {
-    width: 25px;
-    height: 25px;
-    bottom: 10px;
-    left: -15px;
-    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.12), rgba(45, 74, 62, 0.08));
-    border: 1px solid rgba(255,255,255,0.06);
-    animation-delay: 2s;
+    content: '';
+    position: absolute;
+    inset: 50px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(196, 153, 59, 0.15) 0%, transparent 70%);
+    border: 1px solid rgba(196, 153, 59, 0.08);
 }
 
-@keyframes glowPulse {
-    0%, 100% { transform: scale(1); opacity: 0.5; }
-    50% { transform: scale(1.12); opacity: 0.85; }
-}
-
-@keyframes bubbleFloat {
-    0%, 100% { transform: translateY(0) scale(1); }
-    50% { transform: translateY(-15px) scale(1.1); }
+@keyframes sacredPulse {
+    0%, 100% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.08); opacity: 1; }
 }
 
 @media (max-width: 768px) {
