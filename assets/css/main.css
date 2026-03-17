@@ -621,6 +621,141 @@ section { padding: 7rem 2rem; }
 
 .btn-highlight .icon { font-size: 1.1rem; }
 
+/* ── LEAD MAGNET ── */
+.lead-magnet {
+    background: var(--light);
+    padding: 5rem 2rem;
+}
+
+.lead-magnet-card {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--dark);
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+}
+
+.lead-magnet-content {
+    padding: 3.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.lead-magnet-badge {
+    display: inline-block;
+    background: var(--forest);
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.35rem 1rem;
+    border-radius: 50px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.lead-magnet-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    color: var(--white);
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.lead-magnet-content > p {
+    color: rgba(240, 230, 214, 0.6);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+.lead-magnet-benefits {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.lead-magnet-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.4rem 0;
+    color: var(--sand);
+    font-size: 0.92rem;
+    font-weight: 400;
+}
+
+.lead-magnet-benefits .icon {
+    font-size: 0.9rem;
+    color: var(--forest);
+    background: rgba(45, 74, 62, 0.25);
+    padding: 4px;
+    border-radius: 50%;
+}
+
+.btn-lead {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--forest);
+    color: var(--white);
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.btn-lead:hover {
+    background: #3D7A52;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(45, 74, 62, 0.4);
+}
+
+.btn-lead .icon { font-size: 1.1rem; }
+
+.lead-magnet-hint {
+    color: rgba(240, 230, 214, 0.35);
+    font-size: 0.82rem;
+    margin-top: 0.8rem;
+    font-weight: 300;
+}
+
+.lead-magnet-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.lead-magnet-glow {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(45, 74, 62, 0.4) 0%, rgba(24, 99, 220, 0.15) 50%, transparent 70%);
+    animation: glowPulse 4s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.15); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .lead-magnet-card { grid-template-columns: 1fr; }
+    .lead-magnet-visual { display: none; }
+    .lead-magnet-content { padding: 2.5rem; }
+    .lead-magnet-content h2 { font-size: 1.6rem; }
+}
+
 /* ── STEPS ── */
 .steps-section { background: var(--light); }
 
