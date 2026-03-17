@@ -463,24 +463,23 @@ section { padding: 7rem 2rem; }
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    color: var(--white);
     font-size: 1.2rem;
 }
 
-.course-item:nth-child(1) .course-item-icon { background: linear-gradient(135deg, #1A1A2E, #1863DC); }
-.course-item:nth-child(2) .course-item-icon { background: linear-gradient(135deg, #2A1A12, #B85C38); }
-.course-item:nth-child(3) .course-item-icon { background: linear-gradient(135deg, #1A1A2E, #4A3228); }
-.course-item:nth-child(4) .course-item-icon { background: linear-gradient(135deg, #2D4A3E, #3D6B56); }
-.course-item:nth-child(5) .course-item-icon { background: linear-gradient(135deg, #B85C38, #C4993B); }
-.course-item:nth-child(6) .course-item-icon { background: linear-gradient(135deg, #C4993B, #1863DC); }
-.course-item:nth-child(7) .course-item-icon { background: linear-gradient(135deg, #1863DC, #1A1A2E); }
-.course-item:nth-child(8) .course-item-icon { background: linear-gradient(135deg, #4A3228, #B85C38); }
-.course-item:nth-child(9) .course-item-icon { background: linear-gradient(135deg, #B85C38, #C4993B); }
-.course-item:nth-child(10) .course-item-icon { background: linear-gradient(135deg, #9A7520, #C4993B); }
-.course-item:nth-child(11) .course-item-icon { background: linear-gradient(135deg, #1863DC, #2D4A3E); }
-.course-item:nth-child(12) .course-item-icon { background: linear-gradient(135deg, #1A1A2E, #1863DC); }
-.course-item:nth-child(13) .course-item-icon { background: linear-gradient(135deg, #4A3228, #2A1A12); }
-.course-item:nth-child(14) .course-item-icon { background: linear-gradient(135deg, #2D4A3E, #1A1A2E); }
+.course-item:nth-child(1) .course-item-icon { background: rgba(24, 99, 220, 0.1); color: #1863DC; }
+.course-item:nth-child(2) .course-item-icon { background: rgba(184, 92, 56, 0.1); color: #B85C38; }
+.course-item:nth-child(3) .course-item-icon { background: rgba(26, 26, 46, 0.08); color: #1A1A2E; }
+.course-item:nth-child(4) .course-item-icon { background: rgba(45, 74, 62, 0.1); color: #2D4A3E; }
+.course-item:nth-child(5) .course-item-icon { background: rgba(196, 153, 59, 0.12); color: #C4993B; }
+.course-item:nth-child(6) .course-item-icon { background: rgba(24, 99, 220, 0.1); color: #1863DC; }
+.course-item:nth-child(7) .course-item-icon { background: rgba(24, 99, 220, 0.08); color: #4A8AEF; }
+.course-item:nth-child(8) .course-item-icon { background: rgba(184, 92, 56, 0.1); color: #B85C38; }
+.course-item:nth-child(9) .course-item-icon { background: rgba(196, 153, 59, 0.1); color: #C4993B; }
+.course-item:nth-child(10) .course-item-icon { background: rgba(196, 153, 59, 0.12); color: #9A7520; }
+.course-item:nth-child(11) .course-item-icon { background: rgba(24, 99, 220, 0.1); color: #1863DC; }
+.course-item:nth-child(12) .course-item-icon { background: rgba(45, 74, 62, 0.1); color: #2D4A3E; }
+.course-item:nth-child(13) .course-item-icon { background: rgba(74, 50, 40, 0.08); color: #4A3228; }
+.course-item:nth-child(14) .course-item-icon { background: rgba(45, 74, 62, 0.1); color: #2D4A3E; }
 
 .course-item-icon svg {
     width: 1.2em;
@@ -525,6 +524,64 @@ section { padding: 7rem 2rem; }
 
 .course-item-badge.live { background: var(--terracotta); color: var(--white); }
 .course-item-badge.free { background: var(--forest); color: var(--white); }
+
+.course-more {
+    text-align: center;
+    padding: 1.5rem 0 0.5rem;
+}
+
+.course-more-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    color: var(--text-light);
+    font-style: italic;
+    font-weight: 500;
+}
+
+.course-teaser {
+    max-width: 800px;
+    margin: 2.5rem auto 0;
+    text-align: center;
+}
+
+.course-teaser-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    color: var(--dark);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.course-teaser-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+.course-teaser-tags span {
+    background: var(--white);
+    border: 1px solid rgba(24, 99, 220, 0.12);
+    color: var(--text-mid);
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.88rem;
+    font-weight: 400;
+    transition: all 0.3s;
+}
+
+.course-teaser-tags span:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+    background: rgba(24, 99, 220, 0.04);
+}
+
+.course-teaser-tags span:last-child {
+    background: rgba(24, 99, 220, 0.08);
+    border-color: rgba(24, 99, 220, 0.2);
+    color: var(--blue);
+    font-weight: 500;
+}
 
 .course-note {
     text-align: center;
