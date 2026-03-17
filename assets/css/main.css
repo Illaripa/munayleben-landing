@@ -689,33 +689,38 @@ section { padding: 7rem 2rem; }
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    background: rgba(45, 74, 62, 0.1);
+    background: rgba(45, 74, 62, 0.12);
     color: var(--forest);
-    font-size: 0.78rem;
+    font-size: 0.85rem;
     font-weight: 700;
-    padding: 0.4rem 1.1rem;
+    padding: 0.45rem 1.3rem;
     border-radius: 50px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     margin-bottom: 1.5rem;
-    border: 1px solid rgba(45, 74, 62, 0.15);
+    border: 1px solid rgba(45, 74, 62, 0.18);
 }
 
 .lead-magnet-content h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--dark);
-    font-weight: 500;
-    line-height: 1.2;
-    margin-bottom: 1rem;
+    font-weight: 600;
+    line-height: 1.15;
+    margin-bottom: 1.2rem;
+}
+
+.lead-magnet-content h2 em {
+    font-style: italic;
+    color: var(--gold-dark);
 }
 
 .lead-magnet-content > p {
-    color: var(--text-light);
-    font-size: 0.95rem;
+    color: var(--text-mid);
+    font-size: 1.05rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .lead-magnet-benefits {
@@ -727,9 +732,9 @@ section { padding: 7rem 2rem; }
     display: flex;
     align-items: center;
     gap: 0.7rem;
-    padding: 0.45rem 0;
+    padding: 0.5rem 0;
     color: var(--text);
-    font-size: 0.92rem;
+    font-size: 1rem;
     font-weight: 400;
 }
 
@@ -745,18 +750,19 @@ section { padding: 7rem 2rem; }
 .btn-lead {
     display: inline-flex;
     align-items: center;
-    gap: 0.6rem;
+    gap: 0.7rem;
     background: linear-gradient(135deg, var(--gold), var(--gold-dark));
     color: var(--white);
-    padding: 1.05rem 2.5rem;
+    padding: 1.15rem 3rem;
     border-radius: 50px;
-    font-size: 0.95rem;
-    font-weight: 600;
+    font-size: 1.05rem;
+    font-weight: 700;
     text-decoration: none;
     border: none;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 6px 20px rgba(196, 153, 59, 0.25);
+    box-shadow: 0 8px 25px rgba(196, 153, 59, 0.3);
+    letter-spacing: 0.3px;
 }
 
 .btn-lead:hover {
@@ -769,8 +775,8 @@ section { padding: 7rem 2rem; }
 
 .lead-magnet-hint {
     color: var(--text-light);
-    font-size: 0.82rem;
-    margin-top: 0.8rem;
+    font-size: 0.88rem;
+    margin-top: 1rem;
     font-weight: 300;
     font-style: italic;
 }
@@ -825,7 +831,7 @@ section { padding: 7rem 2rem; }
     .lead-magnet-card { grid-template-columns: 1fr; }
     .lead-magnet-visual { display: none; }
     .lead-magnet-content { padding: 2.5rem; }
-    .lead-magnet-content h2 { font-size: 1.6rem; }
+    .lead-magnet-content h2 { font-size: 1.8rem; }
 }
 
 /* ── STEPS ── */
